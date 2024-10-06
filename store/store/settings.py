@@ -27,29 +27,32 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-DOMAIN_NAME = "http://localhost:8000"
+DOMAIN_NAME = "http://127.0.0.1:8000"
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    # OAuth
-    "django.contrib.sites",
     # django
+    "django.contrib.sites",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.humanize",
+
     # Django Debug Toolbar
     "debug_toolbar",
+
     # OAuth
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     # OAuth social
     "allauth.socialaccount.providers.github",
+
     # my apps
     "products",
     "orders",
@@ -208,3 +211,9 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 CELERY_BROKER_URL = "redis://127.0.0.1:6379"
 CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379"
+
+# Strip
+
+STRIPE_PUBLIC_KEY = "pk_test_51PzXzxP37XViIZAKvABDqtPyWfEqc5cPpHlZNZCbVcfh4sFpvhvS3jHcGDJKYJveE8Km1W4lwsi3DhYe42mOAeXw00aU7yiklI"
+STRIPE_SECRET_KEY = "sk_test_51PzXzxP37XViIZAK9gAhJByYZfcU5fiXKANzasp5osCucjDn15E1uN94mzsdifrdI6lEkzDXp3jzjd77lr99UNyo00XwhviRB4"
+STRIPE_WEBHOOK_SECRET = "whsec_43ae9f190fd702337b3d710620eff4bc5f8fbd179e30e849833a5cb5dbd4589b"

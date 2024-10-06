@@ -1,42 +1,42 @@
 [
-    {
-        "model": "products.productcategory",
-        "pk": 1,
-        "fields": {
-            "name": "Одежда",
-            "description": "Описание для одежды"
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 2,
-        "fields": {
-            "name": "Обувь",
-            "description": null
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 3,
-        "fields": {
-            "name": "Аксессуары",
-            "description": ""
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 4,
-        "fields": {
-            "name": "Новинки",
-            "description": ""
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 5,
-        "fields": {
-            "name": "Подарки",
-            "description": ""
-        }
+{
+    "model": "products.productcategory",
+    "pk": 1,
+    "fields": {
+        "name": "╬фхцфр",
+        "description": "╬яшёрэшх фы  юфхцф√"
     }
+},
+{
+    "model": "products.productcategory",
+    "pk": 2,
+    "fields": {
+        "name": "╬сєт№",
+        "description": null
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 3,
+    "fields": {
+        "name": "└ъёхёёєрЁ√",
+        "description": ""
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 4,
+    "fields": {
+        "name": "═ютшэъш",
+        "description": ""
+    }
+},
+{
+    "model": "products.productcategory",
+    "pk": 5,
+    "fields": {
+        "name": "╧юфрЁъш",
+        "description": ""
+    }
+}
 ]
