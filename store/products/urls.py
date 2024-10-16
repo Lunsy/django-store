@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.decorators.cache import cache_page
+
 from products.views import ProductListView, basket_add, basket_remove
 
 app_name = "products"
