@@ -1,1 +1,1 @@
-web: gunicorn store.store.wsgi:application --bind 0.0.0.0:$PORT
+web: DJANGO_SETTINGS_MODULE=store.store.settings gunicorn store.store.wsgi:application --bind 0.0.0.0:$PORT
