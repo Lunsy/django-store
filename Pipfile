@@ -8,6 +8,7 @@ django = "==3.2.12"
 pillow = "*"
 celery = "*"
 django-environ = "*"
+django-extensions = "*"
 
 [dev-packages]
 ipykernel = "*"
