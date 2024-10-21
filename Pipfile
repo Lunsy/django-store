@@ -10,6 +10,7 @@ celery = "*"
 django-environ = "*"
 django-extensions = "*"
 django-debug-toolbar = "*"
+django-allauth = "*"
 
 [dev-packages]
 ipykernel = "*"
