@@ -11,6 +11,8 @@ django-environ = "*"
 django-extensions = "*"
 django-debug-toolbar = "*"
 django-allauth = "*"
+psycopg2 = "*"
+debugpy = "*"
 
 [dev-packages]
 ipykernel = "*"
