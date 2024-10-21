@@ -9,6 +9,7 @@ pillow = "*"
 celery = "*"
 django-environ = "*"
 django-extensions = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 ipykernel = "*"
