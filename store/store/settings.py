@@ -77,7 +77,7 @@ INSTALLED_APPS = [
     "django.contrib.humanize",
 
     # Django Debug Toolbar
-    "debug_toolbar",
+    #"debug_toolbar",
 
     # OAuth
     "allauth",
@@ -106,7 +106,7 @@ MIDDLEWARE = [
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
     # Django-debug-toolbar
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    #"debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "store.urls"
