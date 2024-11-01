@@ -55,7 +55,7 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
 
 # Добавьте эту строку для отладки
-print("DEBUG:", DEBUG)
+#print("DEBUG:", DEBUG)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -77,7 +77,7 @@ INSTALLED_APPS = [
     "django.contrib.humanize",
 
     # Django Debug Toolbar
-    #"debug_toolbar",
+    "debug_toolbar",
 
     # OAuth
     "allauth",
@@ -105,7 +105,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
-    "Django-debug-toolbar",
+    #Django-debug-toolbar
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
