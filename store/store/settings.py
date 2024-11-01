@@ -14,8 +14,6 @@ from pathlib import Path
 import environ
 import os
 
-from django.conf.global_settings import STATIC_ROOT
-
 env = environ.Env(
     DEBUG=(bool),
     SECRET_KEY=(str),
@@ -55,6 +53,9 @@ SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
+
+# Добавьте эту строку для отладки
+print("DEBUG:", DEBUG)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -104,8 +105,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
-    # Django-debug-toolbar
-    #"debug_toolbar.middleware.DebugToolbarMiddleware",
+    "Django-debug-toolbar",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "store.urls"
@@ -203,8 +204,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+
 if DEBUG:
-    STATICFILES_DIRS = (BASE_DIR / "static",)
+    STATICFILES_DIRS = (
+            BASE_DIR / "static",
+    )
 else:
     STATIC_ROOT = BASE_DIR / "static"
 
@@ -250,10 +254,10 @@ SOCIALACCOUNT_PROVIDERS = {
             "user",
         ],
     }
-
+  }
 
 # Celery
-}
+
 CELERY_BROKER_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}"
 CELERY_RESULT_BACKEND = f"redis://{REDIS_HOST}:{REDIS_PORT}"
 
