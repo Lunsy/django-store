@@ -14,8 +14,7 @@ from pathlib import Path
 import environ
 import os
 
-
-
+from django.conf.global_settings import STATIC_ROOT
 
 env = environ.Env(
     DEBUG=(bool),
@@ -204,7 +203,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = (BASE_DIR / "static",)
+if DEBUG:
+    STATICFILES_DIRS = (BASE_DIR / "static",)
+else:
+    STATIC_ROOT = BASE_DIR / "static"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
