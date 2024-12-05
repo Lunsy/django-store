@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import environ
 
+import environ
 
 env = environ.Env(
     DEBUG=(bool),
@@ -55,12 +55,11 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
 
 # Добавьте эту строку для отладки
-#print("DEBUG:", DEBUG)
+# print("DEBUG:", DEBUG)
 
 ALLOWED_HOSTS = ["*"]
 
-DOMAIN_NAME =  env("DOMAIN_NAME")
-
+DOMAIN_NAME = env("DOMAIN_NAME")
 
 # Application definition
 
@@ -109,7 +108,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
-    #Django-debug-toolbar
+    # Django-debug-toolbar
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
@@ -143,7 +142,7 @@ INTERNAL_IPS = [
 REDIS_HOST = env("REDIS_HOST")
 REDIS_PORT = env("REDIS_PORT")
 
-#Caches
+# Caches
 
 CACHES = {
     "default": {
@@ -218,7 +217,7 @@ else:
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
-#MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -272,7 +271,7 @@ STRIPE_PUBLIC_KEY = env("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
 STRIPE_WEBHOOK_SECRET = env("STRIPE_WEBHOOK_SECRET")
 
-#Django REST Framework
+# Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 3,

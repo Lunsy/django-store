@@ -101,5 +101,5 @@ class Basket(models.Model):
             basket = baskets.first()
             basket.quantity += 1
             basket.save()
-            is_crated = False
-            return basket, is_crated
+            is_created = False
+            return basket, is_created

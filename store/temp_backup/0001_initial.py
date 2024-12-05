@@ -24,8 +24,10 @@ class Migration(migrations.Migration):
                 ('address', models.CharField(max_length=256)),
                 ('basket_history', models.JSONField(default=dict)),
                 ('created', models.DateTimeField(auto_now_add=True)),
-                ('status', models.SmallIntegerField(choices=[(0, 'Создан'), (1, 'Оплачен'), (2, 'В Пути'), (3, 'Доставленно')], default=0)),
-                ('initiator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('status', models.SmallIntegerField(choices=[(0, 'Создан'), (1, 'Оплачен'), (2, 'В Пути'),
+                                                             (3, 'Доставленно')], default=0)),
+                ('initiator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                                to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

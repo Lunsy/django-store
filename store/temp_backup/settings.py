@@ -10,12 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
-import environ
 import os
+from pathlib import Path
 
-
-
+import environ
 
 env = environ.Env(
     DEBUG=(bool),
@@ -59,7 +57,7 @@ DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
-DOMAIN_NAME =  env("DOMAIN_NAME")
+DOMAIN_NAME = env("DOMAIN_NAME")
 
 
 # Application definition
@@ -139,7 +137,7 @@ INTERNAL_IPS = [
 REDIS_HOST = env("REDIS_HOST")
 REDIS_PORT = env("REDIS_PORT")
 
-#Caches
+# Caches
 
 CACHES = {
     "default": {
@@ -248,10 +246,8 @@ SOCIALACCOUNT_PROVIDERS = {
             "user",
         ],
     }
-
-
-# Celery
 }
+# Celery
 CELERY_BROKER_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}"
 CELERY_RESULT_BACKEND = f"redis://{REDIS_HOST}:{REDIS_PORT}"
 
